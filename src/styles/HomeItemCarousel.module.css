@@ -1,0 +1,43 @@
+.carouselContainer {
+  background-color: white;
+  margin-top: 50px;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carouselHeader {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  position: relative;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.carouselTitle {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carouselBtn {
+  position: absolute;
+  right: 0;
+  background-color: #00632d;
+  margin-top: 45px;
+  margin-right: 15px;
+}
+.itemName {
+  font-size: 32px;
+  font-weight: bold;
+}
+.containerTitle {
+  text-align: center;
+  padding: 30px;
+  font-size: 48px;
+  font-weight: bold;
+}

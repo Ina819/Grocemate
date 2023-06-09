@@ -1,0 +1,13 @@
+.leftContainer {
+  background-color: #00632d;
+  height: 100vh;
+  width: 50%;
+  position: relative;
+}
+.rightContainer {
+  background-image: url("./../assets/mainImage.png");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  background-repeat: no-repeat;
+}

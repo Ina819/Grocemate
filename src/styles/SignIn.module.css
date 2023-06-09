@@ -1,0 +1,7 @@
+.rightContainer {
+  background-image: url("./../assets/loginImage.png");
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,7 @@
+.rightContainer {
+  background-image: url("./../assets/signupImage.png");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+
+  grocemate-app:
+    container_name: grocemate-app
+    image: grocemate-app
+    networks:
+      - springboot-mariadb-net
+    build: .
+    restart: always
+    ports:
+      - '8081:8000'
+      - '3001:3000'
+    environment:
+      MYSQL_HOST: grocemate-db
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_PORT: 3306
+    volumes:
+      - type: volume
+        source: app-data
+        target: "/usr/src/app"
+    depends_on:
+      - grocemate-db
+
+  grocemate-db:
+    container_name: grocemate-db
+    image: mariadb
+    networks:
+      - springboot-mariadb-net
+    ports:
+      - '3307:3306'
+    restart: always
+    volumes:
+      - type: volume
+        source: db-data
+        target: "/var/lib/mysql"
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_ROOT_HOST: localhost
+      MARIADB_USER: ${MYSQL_USER}
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD}
+      MARIADB_DATABASE: grocemate_db
+    command: [ '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+
+volumes:
+  db-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${DB_DATA_DIR}
+      o: bind
+  app-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${APP_DATA_DIR}
+      o: bind
+
+networks:
+  springboot-mariadb-net:
+    driver: bridge

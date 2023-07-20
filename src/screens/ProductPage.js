@@ -5,6 +5,7 @@ import dummy1 from "./../assets/dummyProduct1.png";
 import dummy2 from "./../assets/dummyProduct2.png";
 import dummy3 from "./../assets/dummyProduct3.png";
 import dummy4 from "./../assets/dummyProduct4.png";
+import { Link } from "react-router-dom";
 
 const ProductContainer = styled.div`
   display: flex;
@@ -89,18 +90,27 @@ const ProductPage = () => {
               marginTop: "30px",
             }}
           >
-            <Image src={item.imageSrc} rounded />
-            <div
+            <Link
+              to="./detail"
               style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "start",
+                color: "black",
+                textDecoration: "none",
+                fontSize: "20px",
               }}
             >
-              <span>{item.supplier}</span>
-              <span>{item.foodName}</span>
-              <span>{item.price}</span>
-            </div>
+              <Image src={item.imageSrc} rounded />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "start",
+                }}
+              >
+                <span>{item.supplier}</span>
+                <span>{item.foodName}</span>
+                <span>{item.price}</span>
+              </div>
+            </Link>
           </div>
         ))}
       </ProductContainer>

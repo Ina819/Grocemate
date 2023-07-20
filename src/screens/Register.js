@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import background from "./../assets/signupImage.png";
 import { ContainerWithForm, LoginLeftPanel } from "../components/AppStyle";
 import styles from "./../styles/Register.module.css";
 

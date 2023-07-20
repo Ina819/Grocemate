@@ -20,3 +20,11 @@ export const LoginLeftPanel = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
+export const PageContainer = styled.div`
+  width: 80%;
+  margin-top: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`;

@@ -22,6 +22,14 @@ export const LoginLeftPanel = styled.div`
 `;
 
 export const PageContainer = styled.div`
+  width: 50%;
+  margin-top: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
+export const Container = styled.div`
   width: 80%;
   margin-top: 100px;
   position: relative;

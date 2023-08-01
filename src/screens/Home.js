@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./../styles/Home.module.css";
 import HomeContents from "../components/HomeContents";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,9 +19,11 @@ const Home = () => {
                 Healthy, delicious and easy meals made your life happier and
                 joyful.
               </p>
-              <button class="btn btn-warning fw-bold btn-lg" type="button">
-                SHOP NOW
-              </button>
+              <Link to="/salads">
+                <button class="btn btn-warning fw-bold btn-lg" type="button">
+                  SHOP NOW
+                </button>
+              </Link>
             </div>
           </div>
         </div>

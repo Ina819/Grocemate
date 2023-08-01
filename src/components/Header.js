@@ -46,7 +46,7 @@ function Header() {
               <Nav.Link href="/" className="text-white">
                 Home
               </Nav.Link>
-              <Nav.Link href="#action2" className="text-white">
+              <Nav.Link href="/salads" className="text-white">
                 Shop
               </Nav.Link>
               <Nav.Link href="#" className="text-white">
@@ -63,8 +63,8 @@ function Header() {
             aria-label="Search"
             style={{ backgroundColor: "#00632d" }}
           />
-          <Button style={{ backgroundColor: "#00632d" }}>
-            <img src={buyIcon} width="100%" />
+          <Button style={{ backgroundColor: "#00632d" }} href="/basket">
+            <img src={buyIcon} width="100%" alt="basket" />
           </Button>
         </Form>
       </Navbar>

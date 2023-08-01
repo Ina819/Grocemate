@@ -91,7 +91,7 @@ const ProductPage = () => {
             }}
           >
             <Link
-              to="./detail"
+              to="/salads/detail"
               style={{
                 color: "black",
                 textDecoration: "none",

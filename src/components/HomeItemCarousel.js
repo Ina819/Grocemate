@@ -19,7 +19,11 @@ const HomeItemCarousel = ({ title, data }) => {
     <>
       <div className={styles.carouselContainer}>
         <div>
-          <Button variant="success" className={styles.carouselBtn}>
+          <Button
+            variant="success"
+            className={styles.carouselBtn}
+            href="/salads/detail"
+          >
             View all
           </Button>
           <h2 className={styles.containerTitle}>{title}</h2>

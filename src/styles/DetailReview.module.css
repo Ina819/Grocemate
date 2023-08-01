@@ -1,0 +1,35 @@
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+}
+.rating {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.totalReviews {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.AverageRating {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rating > div {
+  padding: 20px 50px;
+}
+
+.reviewsIncrease {
+  background-color: #58c087;
+  border-radius: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.review {
+  display: flex;
+  margin: 30px 0;
+}

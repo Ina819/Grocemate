@@ -8,6 +8,7 @@ import ProductPage from "./screens/ProductPage";
 import AdminSignin from "./screens/AdminSignin";
 import ProductDetailPage from "./screens/ProductDetailPage";
 import RegisterAdmin from "./screens/RegisterAdmin";
+import Basket from "./screens/Basket";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/adminLogin" element={<AdminSignin />} />
         <Route path="/salads" element={<ProductPage />} />
         <Route path="/salads/detail" element={<ProductDetailPage />} />
+        <Route path="/basket" element={<Basket />} />
       </Routes>
     </BrowserRouter>
   );

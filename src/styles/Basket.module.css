@@ -1,0 +1,26 @@
+.basketContainer {
+}
+
+input[type="checkbox"] {
+  border: 1px solid #00632d;
+}
+
+.basket {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #00632d;
+  color: white;
+  padding: 3px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.checkoutBtn {
+  background-color: #ffcb7d;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 30px;
+}

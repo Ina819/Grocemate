@@ -36,7 +36,7 @@ function Basket() {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <span>
                 <input type="checkbox" id="selectAll" />
-                <label htmlFor="selectAll" style={{ marginLeft: 20 }}>
+                <label htmlFor="selectAll" style={{ marginLeft: 10 }}>
                   select all(/)
                 </label>
               </span>
@@ -50,26 +50,16 @@ function Basket() {
               }}
             >
               {dummyBasket.map((product, index) => (
-                <div
-                  key={index}
-                  style={{
-                    display: "flex",
-                    paddingTop: 20,
-                    paddingBottom: 20,
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <div key={index} className={styles.product}>
                   <div style={{ display: "flex" }}>
-                    <input type="checkbox" id="select" />
+                    <input
+                      type="checkbox"
+                      id="select"
+                      className={styles.productCheckbox}
+                    />
                     <img
                       src={product.img}
-                      style={{
-                        width: 100,
-                        height: 100,
-                        marginLeft: 20,
-                        marginRight: 20,
-                      }}
+                      className={styles.productImg}
                       alt={product.foodName}
                     />
                     <div>
@@ -77,9 +67,14 @@ function Basket() {
                       <p>{product.foodName}</p>
                     </div>
                   </div>
-                  <div style={{ display: "flex" }}>
-                    <p>{product.price}</p>
-                    <span style={{ paddingLeft: 30, paddingRight: 30 }}>x</span>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <div className={styles.btnContainer}>
+                      <input type="button" value="-" />
+                      <input type="text" value={100} />
+                      <input type="button" value="+" />
+                    </div>
+                    <span className={styles.productPrice}>{product.price}</span>
+                    <span style={{ paddingRight: 30 }}>x</span>
                   </div>
                 </div>
               ))}

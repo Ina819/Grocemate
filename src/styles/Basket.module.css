@@ -1,8 +1,12 @@
-.basketContainer {
+input#selectAll {
+  border: 1px solid #00632d;
+  background-color: red;
 }
 
-input[type="checkbox"] {
-  border: 1px solid #00632d;
+.overlay {
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid #00632d;
 }
 
 .basket {
@@ -23,4 +27,48 @@ input[type="checkbox"] {
   font-weight: bold;
   padding: 10px;
   margin-top: 30px;
+  border: none;
+  border-radius: 15px;
+}
+
+.product {
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productImg {
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.btnContainer {
+  border: 1px solid #eceaea;
+  border-radius: 10px;
+  padding: 5px 0px;
+}
+
+.btnContainer input {
+  border: none;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.btnContainer input:nth-child(1) {
+  border-right-color: #ffffff;
+}
+.btnContainer input:nth-child(2) {
+  border-left-color: #ffffff;
+  border-right-color: #ffffff;
+}
+.btnContainer input:nth-child(3) {
+  border-left-color: #ffffff;
+}
+.productPrice {
+  padding: 0 30px;
 }

@@ -9,11 +9,14 @@ import AdminSignin from "./screens/AdminSignin";
 import ProductDetailPage from "./screens/ProductDetailPage";
 import RegisterAdmin from "./screens/RegisterAdmin";
 import Basket from "./screens/Basket";
+import Admin from "./screens/Admin";
+import { useState } from "react";
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState(true);
   return (
     <BrowserRouter>
-      <Header />
+      {isAdmin ? null : <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<SignIn />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path="/salads" element={<ProductPage />} />
         <Route path="/salads/detail" element={<ProductDetailPage />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/admin" element={isAdmin ? <Admin /> : null} />
       </Routes>
     </BrowserRouter>
   );

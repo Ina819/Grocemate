@@ -74,7 +74,7 @@ const HomeItemCarousel = ({ title, data }) => {
           <Button
             variant="success"
             className={styles.carouselBtn}
-            href="/salads/detail"
+            href="/salads"
           >
             View all
           </Button>
